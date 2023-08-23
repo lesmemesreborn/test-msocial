@@ -39,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "formik": "^2.4.3",
+    "sass": "^1.66.1",
+    "yup": "^1.2.0"
   }
 }

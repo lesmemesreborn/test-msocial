@@ -1,0 +1,21 @@
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.page {
+  &__container {
+    width: 1260px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .page__container {
+    padding: 10px;
+  }
+}
