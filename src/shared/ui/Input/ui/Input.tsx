@@ -1,5 +1,5 @@
-import { memo, useRef } from "react";
-import { ErrorMessage, Field, FieldProps } from "formik";
+import {memo, useRef} from "react";
+import {ErrorMessage, Field, FieldProps} from "formik";
 import "./Input.scss";
 
 interface InputProps {
@@ -10,7 +10,10 @@ interface InputProps {
     label: string;
     itemPlaceholder?: string;
     isRequired?: boolean;
-    description?: string;
+    description?: string
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    value: string;
+    errorClass?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -51,7 +54,7 @@ const Input: React.FC<InputProps> = ({
                     )}
                 </Field>
                 <div ref={errorRef}>
-                    <ErrorMessage name={itemName} component="div" className="error-message" />
+                    <ErrorMessage name={itemName} component="div" className="error-message"/>
                 </div>
             </div>
             {description && (

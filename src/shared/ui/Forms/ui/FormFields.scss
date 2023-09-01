@@ -2,6 +2,7 @@
   &-label {
     display: block;
     margin-bottom: 5px;
+
     &.required {
       color: red;
     }
@@ -13,6 +14,7 @@
     padding: 5px;
     border: 1px solid grey;
     border-radius: 3px;
+
     &.error-field {
       border-color: red;
     }
@@ -21,6 +23,7 @@
   &-checkbox {
     display: flex;
     align-items: center;
+
     &-label {
       margin-left: 5px;
     }

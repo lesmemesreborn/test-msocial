@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./Submit.scss";
 import {Button} from "../../../shared/ui/Button";
 import {LastChangeDate} from "../../../shared/ui/LastChangeDate";
@@ -13,8 +13,8 @@ export const Submit: React.FC = () => {
 
     return (
         <div className="submit-container">
-            <Button onClick={handleButtonClick} />
-            <LastChangeDate date={date} />
+            <Button onClick={handleButtonClick}/>
+            <LastChangeDate date={date}/>
         </div>
     );
 };

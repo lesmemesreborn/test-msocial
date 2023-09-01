@@ -2,7 +2,7 @@
   &__container {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
-    grid-column-gap: 12px;
+    grid-column-gap: 10px;
     align-items: center;
     padding-top: 20px;
   }
@@ -13,7 +13,7 @@
     border-radius: 12px;
     border: 1px solid #D0D4D9;
     background: transparent;
-    padding: 0 10px;
+    padding-left: 10px;
     width: 360px;
 
     &:hover {
@@ -36,4 +36,17 @@
 .error-message {
   color: red;
   font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .form-input {
+    &__container {
+      grid-template-columns: 1fr;
+      padding: 0.5em 1em;
+    }
+
+    &__field {
+      width: 100%;
+    }
+  }
 }

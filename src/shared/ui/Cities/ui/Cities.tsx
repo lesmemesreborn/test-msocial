@@ -1,6 +1,5 @@
 import React from "react";
 import {FieldArray, FieldArrayRenderProps} from "formik";
-import "./Cities.scss";
 
 interface CityData {
     city: string;
@@ -9,12 +8,13 @@ interface CityData {
 interface CitiesProps {
     itemName: string;
     sortedCitiesData: CityData[];
+    value: Record<string, unknown>;
 }
 
 const Cities: React.FC<CitiesProps> = ({itemName, sortedCitiesData}) => {
     return (
-        <div className="cities-container">
-            <label className="cities-label" htmlFor="cities-input">
+        <div className="form-input__container">
+            <label className="form-input__label" htmlFor="cities-input">
                 Ваш город
             </label>
             <FieldArray
@@ -22,7 +22,7 @@ const Cities: React.FC<CitiesProps> = ({itemName, sortedCitiesData}) => {
                 render={(arrayHelpers: FieldArrayRenderProps) => (
                     <select
                         id="cities-input"
-                        className="cities-input"
+                        className="form-input__field"
                         onChange={(e) => {
                             arrayHelpers.form.setFieldValue(itemName, e.target.value);
                         }}

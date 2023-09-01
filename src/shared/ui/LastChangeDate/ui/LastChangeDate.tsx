@@ -10,9 +10,10 @@ const MonthNames = [
     "июля", "августа", "сентября", "октября", "ноября", "декабря"
 ];
 
-export const LastChangeDate: React.FC<LastChangeDateProps> = ({ date }) => (
+export const LastChangeDate: React.FC<LastChangeDateProps> = ({date}) => (
     <div className="change-date">
-        <span className="change-date__text"> последние изменения {date.getDate()} {MonthNames[date.getMonth()]} {date.getFullYear()} в {date.toLocaleTimeString()}</span>
+        <span
+            className="change-date__text"> последние изменения {date.getDate()} {MonthNames[date.getMonth()]} {date.getFullYear()} в {date.toLocaleTimeString()}</span>
     </div>
 );
 

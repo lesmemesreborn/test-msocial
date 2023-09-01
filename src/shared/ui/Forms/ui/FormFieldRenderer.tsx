@@ -16,15 +16,15 @@ interface FormFieldRendererProps {
 }
 
 export const FormFieldRenderer: React.FC<FormFieldRendererProps> = ({
-                                                                 fieldType,
-                                                                 options = [], // Использовать пустой массив по умолчанию
-                                                                 ...props
-                                                             }: FormFieldRendererProps) => {
+                                                                        fieldType,
+                                                                        options = [], // Использовать пустой массив по умолчанию
+                                                                        ...props
+                                                                    }: FormFieldRendererProps) => {
     switch (fieldType) {
         case "text":
             return <TextFieldForm {...props} />;
         case "select":
-            return <SelectFieldForm {...props} options={options} />;
+            return <SelectFieldForm {...props} options={options}/>;
         case "checkbox":
             return <CheckFieldForm {...props} />;
         default:
